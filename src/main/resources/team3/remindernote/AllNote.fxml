@@ -20,40 +20,52 @@
          <children>
             <VBox prefHeight="564.0" prefWidth="268.0" style="-fx-background-color: #1D2648;">
                <children>
-                  <HBox prefHeight="40.0" prefWidth="209.0">
-                     <children>
-                        <ImageView fitHeight="72.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../java/remindenote/image/Reminder.png" />
-                           </image></ImageView>
-                        <Label prefHeight="32.0" prefWidth="151.0" text="All reminders" textFill="WHITE">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="34.0" prefWidth="247.0">
-                     <children>
-                        <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../java/remindenote/image/Note.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets left="4.0" />
-                           </HBox.margin></ImageView>
-                        <Label text="All notes" textFill="WHITE">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
+                  <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="235.0" stylesheets="@css/TransparentColor.css" text="Button">
+                     <graphic>
+                        <HBox prefHeight="31.0" prefWidth="247.0" stylesheets="@css/TransparentColor.css">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="225.0" text="All reminders" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/Reminder.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="247.0" stylesheets="@css/TransparentColor.css" text="Button">
+                     <graphic>
+                        <HBox prefHeight="34.0" prefWidth="247.0">
+                           <children>
+                              <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/Note.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="All notes" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
                   <HBox prefHeight="417.0" prefWidth="247.0" />
                   <HBox prefHeight="52.0" prefWidth="247.0">
                      <children>
                         <Label prefHeight="17.0" prefWidth="157.0" text=" " />
-                        <Button alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="46.0" prefWidth="81.0" stylesheets="@../css/TransparentColor.css" text="Exit" textFill="WHITE">
+                        <Button alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="46.0" prefWidth="81.0" stylesheets="@css/TransparentColor.css" text="Exit" textFill="WHITE">
                            <font>
                               <Font size="22.0" />
                            </font>
