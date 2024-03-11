@@ -1,7 +1,7 @@
-module com.team3.mavenproject1 {
+module team3.remindernote.App {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens com.team3.mavenproject1 to javafx.fxml;
-    exports com.team3.mavenproject1;
+    opens team3.remindernote to javafx.fxml;
+    exports team3.remindernote;
 }
