@@ -11,6 +11,12 @@
         <javafx.path>C:\IDE\openjfx-21.0.2_windows-x64_bin-sdk\javafx-sdk-21.0.2</javafx.path>
     </properties>
     <dependencies>
+<dependency>
+  <groupId>mysql</groupId>
+  <artifactId>mysql-connector-java</artifactId>
+  <version>8.0.27</version>
+  <scope>runtime</scope>
+</dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
