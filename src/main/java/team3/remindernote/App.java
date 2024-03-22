@@ -9,16 +9,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class App extends Application {
+
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-        ConnectDatabase connectDatabase = new ConnectDatabase();
-        connectDatabase.connect();
-        connectDatabase.checkConnection();
-       
-        
-        scene = new Scene(loadFXML("AllNote"));
+        scene = new Scene(loadFXML("EditReminder"));
         stage.setScene(scene);
         stage.setMaximized(true);
         stage.show();
@@ -32,4 +28,5 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
+
 }
