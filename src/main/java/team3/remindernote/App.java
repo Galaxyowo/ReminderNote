@@ -15,10 +15,9 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         ConnectDatabase connectDatabase = new ConnectDatabase();
         connectDatabase.connect();
-        connectDatabase.checkConnection();
        
         
-        scene = new Scene(loadFXML("AllNote"));
+        scene = new Scene(loadFXML("AllReminder"));
         stage.setScene(scene);
         stage.setMaximized(true);
         stage.show();
