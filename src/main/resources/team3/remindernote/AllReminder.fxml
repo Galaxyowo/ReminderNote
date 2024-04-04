@@ -82,7 +82,7 @@
             </VBox>
             <VBox prefHeight="564.0" prefWidth="733.0" style="-fx-background-color: white;">
                <children>
-                  <Button fx:id="AddReminder" mnemonicParsing="false" prefHeight="46.0" prefWidth="167.0" style="-fx-background-color: #76A8F5;" text="Add remind" textFill="#0c3a6f">
+                  <Button onAction="#AddReminder" mnemonicParsing="false" prefHeight="46.0" prefWidth="167.0" style="-fx-background-color: #76A8F5;" text="Add remind" textFill="#0c3a6f">
                      <font>
                         <Font size="22.0" />
                      </font>
