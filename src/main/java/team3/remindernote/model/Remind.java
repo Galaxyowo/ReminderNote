@@ -64,22 +64,6 @@ public class Remind {
         this.remindTime = remindTime;
     }
 
-    public String getLinkFile() {
-        return linkFile;
-    }
-
-    public void setLinkFile(String linkFile) {
-        this.linkFile = linkFile;
-    }
-
-    public String getTypeFile() {
-        return typeFile;
-    }
-
-    public void setTypeFile(String typeFile) {
-        this.typeFile = typeFile;
-    }
-
     @Override
     public String toString() {
         return "Remind{" +
@@ -88,8 +72,7 @@ public class Remind {
                 ", content='" + content + '\'' +
                 ", createdDate=" + createdDate +
                 ", remindTime=" + remindTime +
-                ", linkFile='" + linkFile + '\'' +
-                ", typeFile='" + typeFile + '\'' +
+                ", +
                 '}';
     }
 }
