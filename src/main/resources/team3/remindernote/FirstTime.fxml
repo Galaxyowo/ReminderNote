@@ -10,55 +10,54 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
-      <Pane prefHeight="547.0" prefWidth="949.0" style="-fx-background-color: #76ABF5;" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </BorderPane.margin>
-         <children>
-            <VBox prefHeight="559.0" prefWidth="961.0">
-               <children>
-                  <Label prefHeight="70.0" prefWidth="599.0" text="First time use the app?" textFill="WHITE">
-                     <font>
-                        <Font size="48.0" />
-                     </font>
-                  </Label>
-                  <Label prefHeight="37.0" prefWidth="419.0" text="What is your name?" textFill="WHITE">
-                     <font>
-                        <Font size="48.0" />
-                     </font>
-                  </Label>
-                  <HBox prefHeight="31.0" prefWidth="931.0">
-                     <children>
-                        <TextField prefHeight="34.0" prefWidth="768.0" promptText="Enter your name here">
-                           <font>
-                              <Font size="23.0" />
-                           </font>
-                           <padding>
-                              <Insets top="-5.0" />
-                           </padding>
-                           <HBox.margin>
-                              <Insets right="10.0" />
-                           </HBox.margin>
-                        </TextField>
-                        <Button lineSpacing="4.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #A6CAFF; -fx-border-color: #A6CAFF;" text="Start">
-                           <font>
-                              <Font size="21.0" />
-                           </font>
-                           <padding>
-                              <Insets bottom="-5.0" top="-5.0" />
-                           </padding>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-               <padding>
-                  <Insets left="30.0" top="40.0" />
-               </padding>
-            </VBox>
-         </children>
-      </Pane>
-   </center>
+<BorderPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team3.remindernote.controller.FirstTimeController">
+    <center>
+        <Pane prefHeight="547.0" prefWidth="949.0" style="-fx-background-color: #76ABF5;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </BorderPane.margin>
+            <children>
+                <VBox prefHeight="559.0" prefWidth="961.0">
+                    <children>
+                        <Label prefHeight="70.0" prefWidth="599.0" text="First time use the app?" textFill="WHITE">
+                            <font>
+                                <Font size="48.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="37.0" prefWidth="419.0" text="What is your name?" textFill="WHITE">
+                            <font>
+                                <Font size="48.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="31.0" prefWidth="931.0">
+                            <children>
+                                <TextField fx:id="nameField" prefHeight="34.0" prefWidth="768.0" promptText="Enter your name here">
+                                    <font>
+                                        <Font size="23.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets top="-5.0" />
+                                    </padding>
+                                    <HBox.margin>
+                                        <Insets right="10.0" />
+                                    </HBox.margin>
+                                </TextField>
+                                <Button lineSpacing="4.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #A6CAFF; -fx-border-color: #A6CAFF;" text="Start" onAction="#saveName">
+                                    <font>
+                                        <Font size="21.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets bottom="-5.0" top="-5.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets left="30.0" top="40.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </Pane>
+    </center>
 </BorderPane>

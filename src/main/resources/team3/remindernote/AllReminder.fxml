@@ -41,6 +41,7 @@
                      <stylesheets>
                         <URL value="@css/TransparentColor.css" />
                         <URL value="@css/ButtonMenu.css" />
+                        <URL value="@css/ButtonMenu.css" />
                      </stylesheets>
                   </Button>
                   <Button fx:id="ShowAllNote" mnemonicParsing="false" prefHeight="48.0" prefWidth="247.0" stylesheets="@css/TransparentColor.css" text="All Note">
@@ -82,7 +83,7 @@
             </VBox>
             <VBox prefHeight="564.0" prefWidth="733.0" style="-fx-background-color: white;">
                <children>
-                  <Button onAction="#AddReminder" mnemonicParsing="false" prefHeight="46.0" prefWidth="167.0" style="-fx-background-color: #76A8F5;" text="Add remind" textFill="#0c3a6f">
+                  <Button mnemonicParsing="false" onAction="#AddReminder" prefHeight="46.0" prefWidth="167.0" style="-fx-background-color: #76A8F5;" text="Add remind" textFill="#0c3a6f">
                      <font>
                         <Font size="22.0" />
                      </font>
