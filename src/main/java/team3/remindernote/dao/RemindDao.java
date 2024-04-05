@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class RemindDao {
 
     public int insertRemind(Remind remind) {
-        String sql = "insert into remind(title, content, created_date, remind_time, link_file, type_file) " +
+        String sql = "insert into remind(title, created_date, remind_time,) " +
                 "values (?,?,?,?,?,?)";
         try {
             Connection connect = Connect.getConnect();
@@ -20,8 +20,6 @@ public class RemindDao {
             pre.setString(2, remind.getContent());
             pre.setTimestamp(3, remind.getCreatedDate());
             pre.setTimestamp(4, remind.getRemindTime());
-            pre.setString(5, remind.getLinkFile());
-            pre.setString(6, remind.getTypeFile());
             return pre.executeUpdate();
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -31,7 +29,7 @@ public class RemindDao {
     }
 
     public int updateRemind(Remind remind) {
-        String sql = "update remind set title =?, content=?, created_date=?, remind_time=?, link_file=?, type_file=? " +
+        String sql = "update remind set title =?,created_date=?, remind_time=?," +
                 " where id = ?";
         try {
             Connection connect = Connect.getConnect();
@@ -40,9 +38,7 @@ public class RemindDao {
             pre.setString(2, remind.getContent());
             pre.setTimestamp(3, remind.getCreatedDate());
             pre.setTimestamp(4, remind.getRemindTime());
-            pre.setString(5, remind.getLinkFile());
-            pre.setString(6, remind.getTypeFile());
-            pre.setInt(7, remind.getId());
+            pre.setInt(5, remind.getId());
             return pre.executeUpdate();
         } catch (SQLException e) {
             // TODO Auto-generated catch block
