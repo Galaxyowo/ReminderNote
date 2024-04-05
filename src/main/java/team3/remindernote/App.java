@@ -6,39 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
 
 public class App extends Application {
-    private static final String FIRST_TIME_FXML = "FirstTime";
-    private static final String ALL_REMINDER_FXML = "AllReminder";
-   private static final String FILE_PATH = "C:/Users/Test/Downloads/ReminderNote-main/ReminderNote-main/src/main/java/team3/remindernote/User.txt";
 
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-        if (checkFileExists()) {
-            loadAllReminderFXML(stage);
-        } else {
-            loadFirstTimeFXML(stage);
-        }
-    }
-
-    private boolean checkFileExists() {
-        File file = new File("C:/Users/Test/Downloads/ReminderNote-main/ReminderNote-main/src/main/java/team3/remindernote/User.txt");
-        return file.exists();
-    }
-
-    private void loadFirstTimeFXML(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("FirstTime"));
-        stage.setScene(scene);
-        stage.setMaximized(true);
-        stage.show();
-    }
-
-    private void loadAllReminderFXML(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("AllReminder"));
+        scene = new Scene(loadFXML("EditReminder"));
         stage.setScene(scene);
         stage.setMaximized(true);
         stage.show();
@@ -52,4 +28,5 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
+
 }
