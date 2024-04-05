@@ -35,31 +35,10 @@ public class EditRemindController {
     @FXML
     private TextField txt_id;
 
-
-    private String linkAnh = null;
-    private String typeFile = null;
-
     private RemindDao remindDao = new RemindDao();
 
     @FXML
-    void chooseFile(ActionEvent event) throws MalformedURLException {
-        FileChooser fc = new FileChooser();
-        File f = fc.showOpenDialog(null);
-        if (f != null) {
-            String s = f.getName();
-            System.out.println(s);
-            Path urlFile = f.toPath();
-            linkAnh = urlFile.toString();
-            System.out.println(linkAnh);
-            typeFile = Optional.ofNullable(s)
-                    .filter(fl -> fl.contains("."))
-                    .map(fl -> fl.substring(s.lastIndexOf(".") + 1)).get();
-            System.out.println(typeFile);
-        }
-    }
-
-    @FXML
-    void createRemind(ActionEvent event) throws ParseException {
+    private void createRemind(ActionEvent event) throws ParseException {
         if(txt_id.getText().equals("")){
             Message.getMess("Id do not null");
             return;
@@ -77,10 +56,6 @@ public class EditRemindController {
         Remind remind = new Remind();
         remind.setId(Integer.valueOf(txt_id.getText()));
         remind.setCreatedDate(new Timestamp(System.currentTimeMillis()));
-        remind.setContent(txt_content.getText());
-        remind.setLinkFile(linkAnh);
-        remind.setTitle(txt_title.getText());
-        remind.setTypeFile(typeFile);
         String datestr = txt_date.getValue().toString() +" "+ txt_time.getText();
         System.out.println(datestr);
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
@@ -89,5 +64,6 @@ public class EditRemindController {
         remind.setRemindTime(timestamp);
         remindDao.updateRemind(remind);
         Message.getMess("Edit remind successful !!!");
+        
     }
 }

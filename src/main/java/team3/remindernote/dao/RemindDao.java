@@ -11,15 +11,14 @@ import java.sql.SQLException;
 public class RemindDao {
 
     public int insertRemind(Remind remind) {
-        String sql = "insert into remind(title, created_date, remind_time,) " +
-                "values (?,?,?,?,?,?)";
+        String sql = "insert into remind(title, created_date, remind_time) " +
+                "values (?,?,?)";
         try {
             Connection connect = Connect.getConnect();
             PreparedStatement pre = connect.prepareStatement(sql);
             pre.setString(1, remind.getTitle());
-            pre.setString(2, remind.getContent());
-            pre.setTimestamp(3, remind.getCreatedDate());
-            pre.setTimestamp(4, remind.getRemindTime());
+            pre.setTimestamp(2, remind.getCreatedDate());
+            pre.setTimestamp(3, remind.getRemindTime());
             return pre.executeUpdate();
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -29,19 +28,17 @@ public class RemindDao {
     }
 
     public int updateRemind(Remind remind) {
-        String sql = "update remind set title =?,created_date=?, remind_time=?," +
+        String sql = "update remind set title =?,created_date=?, remind_time=?" +
                 " where id = ?";
         try {
             Connection connect = Connect.getConnect();
             PreparedStatement pre = connect.prepareStatement(sql);
             pre.setString(1, remind.getTitle());
-            pre.setString(2, remind.getContent());
-            pre.setTimestamp(3, remind.getCreatedDate());
-            pre.setTimestamp(4, remind.getRemindTime());
-            pre.setInt(5, remind.getId());
+            pre.setTimestamp(2, remind.getCreatedDate());
+            pre.setTimestamp(3, remind.getRemindTime());
+            pre.setInt(4, remind.getId());
             return pre.executeUpdate();
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return 0;
@@ -59,7 +56,6 @@ public class RemindDao {
                 return true;
             }
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return false;

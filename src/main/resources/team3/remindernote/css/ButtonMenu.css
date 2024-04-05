@@ -1,0 +1,18 @@
+/* CSS cho trạng thái bình thường và nhấn giữ của button */
+.button {
+  -fx-background-color: #007bff; /* Màu nền ban đầu */
+  -fx-text-fill: white; /* Màu chữ ban đầu */
+}
+
+.button:pressed, .button:pressed:focused {
+  -fx-background-color: #0056b3; /* Màu nền sau khi ấn */
+  -fx-text-fill: white; /* Màu chữ sau khi ấn */
+}
+
+.button:pressed {
+  -fx-background-insets: 0;
+}
+
+.button:pressed:focused {
+  -fx-background-insets: 1;
+}

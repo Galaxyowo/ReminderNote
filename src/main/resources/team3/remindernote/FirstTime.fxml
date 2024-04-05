@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team3.remindernote.controller.FirstTimeController" >
    <center>
       <Pane prefHeight="547.0" prefWidth="949.0" style="-fx-background-color: #76ABF5;" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -32,7 +32,7 @@
                   </Label>
                   <HBox prefHeight="31.0" prefWidth="931.0">
                      <children>
-                        <TextField prefHeight="34.0" prefWidth="768.0" promptText="Enter your name here">
+                        <TextField fx:id="nameField" prefHeight="34.0" prefWidth="768.0" promptText="Enter your name here">
                            <font>
                               <Font size="23.0" />
                            </font>
@@ -43,7 +43,7 @@
                               <Insets right="10.0" />
                            </HBox.margin>
                         </TextField>
-                        <Button lineSpacing="4.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #A6CAFF; -fx-border-color: #A6CAFF;" text="Start">
+                        <Button onAction="#saveName" lineSpacing="4.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #A6CAFF; -fx-border-color: #A6CAFF;" text="Start">
                            <font>
                               <Font size="21.0" />
                            </font>

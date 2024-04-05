@@ -10,16 +10,10 @@ public class Remind {
 
     private String title;
 
-    private String content;
 
     private Timestamp createdDate;
 
     private Timestamp remindTime;
-
-    private String linkFile;
-
-    private String typeFile;
-
     public Remind() {
     }
 
@@ -37,14 +31,6 @@ public class Remind {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
     }
 
     public Timestamp getCreatedDate() {
@@ -69,10 +55,8 @@ public class Remind {
         return "Remind{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
                 ", createdDate=" + createdDate +
                 ", remindTime=" + remindTime +
-                ", +
                 '}';
     }
 }

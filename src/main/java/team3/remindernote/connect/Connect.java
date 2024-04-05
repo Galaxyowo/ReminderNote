@@ -2,21 +2,40 @@ package team3.remindernote.connect;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class Connect {
+    private static Connection connection = null;
+
     public static Connection getConnect() {
-        Connection connect = null;
-        try {
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
-                connect = DriverManager.getConnection("jdbc:mysql://localhost:3307/remindernotedb", "root", "");
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        if (connection != null) {
+            return connection;
         }
-        return connect;
+        
+        String jdbcUrl = "jdbc:mysql://localhost:3306/remindernotedb"; 
+        String username = "root"; 
+        String password = ""; 
+
+        try {
+            connection = DriverManager.getConnection(jdbcUrl, username, password);
+            System.out.println("Database Connected");
+        } catch (SQLException e) {
+            System.out.println("Database Not Connected");
+            e.printStackTrace();
+        }
+
+        return connection;
     }
 
+    public static void closeConnection() {
+        try {
+            if (connection != null && !connection.isClosed()) {
+                connection.close();
+                System.out.println("Connection closed successfully.");
+            }
+        } catch (SQLException e) {
+            System.out.println("Failed to close connection.");
+            e.printStackTrace();
+        }
+    }
 }
